@@ -2,13 +2,14 @@ const submit = document.querySelector('#submit')
 const cancel = document.querySelector('#cancel')
 let textarea = document.querySelector('#input-text')
 let outputText = document.querySelector('#res')
-let endTexy;
 let inputText = textarea.value
 submit.addEventListener('click', criptografar)
+cancel.addEventListener('click', descriptografar)
+document.querySelector('#copy').onclick = copy
 
 function criptografar() {
 
-    inputText =textarea.value.toLowerCase()
+    inputText = textarea.value.toLowerCase()
 
     let cripto01 = inputText.replace(/a/g, 'ai')
 
@@ -20,49 +21,38 @@ function criptografar() {
 
     let cripto05 = cripto04.replace(/u/g, 'ufat')
 
-    
-
-    print(endTexy)
-
-    
-return  endTexy = cripto05;
+    inputText = cripto05
+    print(inputText)
+    return
 }
 
-
-console.log(endTexy);
-
 function print(content) {
-    textarea.value = ''
     outputText.innerHTML = `
     <p>${content}</p>
     `
-
     return
 }
 
-function printReturn(returns) {
-    outputText.innerHTML = ''
-    textarea.value = returns
+function descriptografar() {
 
+    inputText = textarea.value.toLowerCase()
+
+    let descripto01 = inputText.replace(/ai/g, 'a')
+
+    let descripto02 = descripto01.replace(/enter/g, 'e')
+
+    let descripto03 = descripto02.replace(/imis/g, 'i')
+
+    let descripto04 = descripto03.replace(/ober/g, 'o')
+
+    let descripto05 = descripto04.replace(/ufat/g, 'u')
+
+    inputText = descripto05
+    print(inputText)
     return
 }
-
-// function teste(descripto) {
-//     alert('aaaaa')
-    
-//     let textReturn = descripto
-
-//     let cripto01 = textReturn.replace(/ai/g, 'a')
-
-//     let cripto02 = cripto01.replace(/enter/g, 'e')
-
-//     let cripto03 = cripto02.replace(/imis/g, 'i')
-
-//     let cripto04 = cripto03.replace(/ober/g, 'o')
-
-//     let cripto05 = cripto04.replace(/ufat/g, 'u')
-
-//     return printReturn(cripto05)
-// }
+function copy (){
+   outputText.execCommand('copy')
+}
 
 
