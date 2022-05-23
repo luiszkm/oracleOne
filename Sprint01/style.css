@@ -80,7 +80,8 @@ main section:nth-child(1) p{
     gap: 2.4rem;
 }
 .buttons button:first-child,
-.buttons button:last-child{
+.buttons button:last-child,#copy
+{
     max-width: 30rem;
     width: 20rem;
     height: 6.7rem;
@@ -89,7 +90,8 @@ main section:nth-child(1) p{
     border-radius: 2.4rem;
     cursor: pointer;
 }
-.buttons button:last-child{
+.buttons button:last-child,#copy
+{
     background-color: var(--bg-color);
     color: var(--primary-color);
     border: 1px solid var(--primary-color);
@@ -100,6 +102,7 @@ aside {
     padding: 3.2rem;
     min-height: 19rem;
     display: flex;
+    gap: 2rem;
     flex-direction: column;
     align-items: center;
     justify-content: center;
